@@ -127,6 +127,11 @@ git config --global --list #查看全局配置信息
 
      可以将远程仓库拷贝到本地。
 
+13. 错误：远程分支和本地分支可能完全没有相关，可能本地分支并没有远程的Readme文件。
 
-​     
+     <img src="error_1.png">
+
+     执行`git pull --rebase <远程仓库地址> master`
+
+     再去推送`git push <地址> master:master`。
 
