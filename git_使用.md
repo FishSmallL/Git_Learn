@@ -17,11 +17,11 @@ git config --global --list #查看全局配置信息
 
     运行 `ssh-keygen -t rsa -C "你在github上注册的邮箱"`，在这个目录下就会有需要的两个文件。
 
-![图片](./ssh.png)
+<img src="./ssh.png">
 
 添加公钥到 Github 服务器：copy 本地 id_rsa.pub 的内容到 Github 的 Setting 中（我做的时候会自动跳到其他页面，把该页面的内容复制到Github中的SSH Key的key中）具体如图：
 
-![添加公钥到Github](./ssh_key.png)
+<img src="./ssh_key.png">
 
 添加
 
@@ -29,11 +29,11 @@ git config --global --list #查看全局配置信息
 
 结果如下：
 
-![](./ssh_key_success.png)
+<img src="./ssh_key_success.png">
 
 自己建立一个文件夹，作为一个Git仓库。使用git bash进入。
 
-![git_repo_create](D:\gitcode\git_repo_create.png)
+<img src="./bash.png" width=400>
 
 ## Git的基本使用
 
@@ -46,7 +46,7 @@ git config --global --list #查看全局配置信息
     
 2. `git status`  
     查看当前仓库状态  
-    ![git_status](.\status.png)
+    <img src=".\status.png">
     
 3.  `git add`
 
@@ -58,13 +58,13 @@ git config --global --list #查看全局配置信息
 
     将暂存区的文件 smelly.txt 提交到了 Git 仓库，其中 commit 表示提交，-m 表示提交信息，双引号""内的是此次提交信息。
 
-    ![test_commit](.\test_commit.png)
+    <img src=".\test_commit.png">
 
 5. `git log`
 
     打印Git仓库提交日志
 
-    ![log](.\log.png)
+    <img src=".\log.png">
 
     上图所示，显示了我们的提交记录，提交记录的内容包括 Author 提交作者、Date 提交日期和提交信息。
 
@@ -74,7 +74,7 @@ git config --global --list #查看全局配置信息
 
     显示了当前仓库中的分支情况，现在仅有一个 master 分支，其中 master 分支前的 ***** 号表示“当前所在的分支”，例如 * master 就意味着我们所在的位置为 demo 仓库的主分支。输入命令 git branch a，再输入命令 git branch，结果如下图所示：
 
-    ![branch_create](.\branch_create.png)
+    <img src=".\branch_create.png">
 
 7. `git checkout`
 
@@ -86,7 +86,7 @@ git config --global --list #查看全局配置信息
 
     切换到 master 分支，然后输入 `git merge a` 命令，将 a 分支合并到 master 分支：
 
-    ![merge](.\merge.png)
+    <img src=".\merge.png">
 
     将 a 分支合并到主分支。
 
@@ -102,17 +102,17 @@ git config --global --list #查看全局配置信息
 
     不过有的时候，通过 `git branch -d` 命令可以出现删除不了现象，例如分支 a 的代码没有合并到主分支等，这时如果一定要删除该分支，那么可以通过命令 `git branch -D` 进行强制删除。
 
-    ![delete](.\delete.png)
+    <img src=".\delete.png">
 
 10. `git tag`
 
     为当前分支添加标签`git tag v1.0`：
 
-    ![tag](.\tag.png)
+    <img src=".\tag.png">
 
     通过命令 `git tag` 即可查看我们添加标签的记录。通过命令 `git checkout v1.0` 即可切换到该标签下的代码状态。
 
-    ![tag_2](.\tag_2.png)
+    <img src=".\tag_2.png">
 
 11. `git push <远程仓库地址> <本地分支名>:<远程分支名>`
 
@@ -129,3 +129,4 @@ git config --global --list #查看全局配置信息
 
 
 ​     
+
