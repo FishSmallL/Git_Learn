@@ -15,7 +15,7 @@ git config --global --list #查看全局配置信息
 
 2. 生成 SSH key 方法：首先确认本地是否已经有该文件，确认 C:\Users\你的用户名.ssh目录下是否有文件 id_rsa 和 id_rsa.pub，如果没有通过以下方法生成：
 
-    运行 `ssh-keygen -t rsa -C "你在github上注册的邮箱"`
+    运行 `ssh-keygen -t rsa -C "你在github上注册的邮箱"`，在这个目录下就会有需要的两个文件。
 
 ![图片](./ssh.png)
 
@@ -23,30 +23,40 @@ git config --global --list #查看全局配置信息
 
 ![添加公钥到Github](./ssh_key.png)
 
+添加
+
+<img src="./sshkey.png" alt="SSH Key" style="width: 50%; height: auto;">
+
 结果如下：
 
 ![](./ssh_key_success.png)
 
 自己建立一个文件夹，作为一个Git仓库。使用git bash进入。
 
-![git_repo_create](.\git_repo_create.png)
+![git_repo_create](D:\gitcode\git_repo_create.png)
 
 ## Git的基本使用
+
+### Git工作流程
+
+<img src="./structure.png" alt="流程图" width=80%>
 
 1. `git init`  
     初始化仓库：  
     
 2. `git status`  
     查看当前仓库状态  
-    ![git_status](.\git_status.png)
+    ![git_status](.\status.png)
     
 3.  `git add`
 
     在该文件夹下新建一文本文档命名为smelly.txt ，然后在 Git Bash 命令行窗口的光标处，输入 `git add smelly.txt` 命令，便将 hit.txt 文件添加到 Git 仓库的暂存区。
 
+    但是一般使用的是`gir add .`来将目录中所有文件添加到暂存区。
+    
 4. `git commit -m "text commit"`
 
-    将文件 smelly.txt 提交到了 Git 仓库，其中 commit 表示提交，-m 表示提交信息，双引号""内的是提交信息。
+    将暂存区的文件 smelly.txt 提交到了 Git 仓库，其中 commit 表示提交，-m 表示提交信息，双引号""内的是此次提交信息。
 
     ![test_commit](.\test_commit.png)
 
@@ -60,9 +70,7 @@ git config --global --list #查看全局配置信息
 
 6. `git branch`
 
-    查看Git仓库发分支情况：
-
-    ![branch](D:\gitcode\branch.png)
+    查看Git仓库发分支情况。
 
     显示了当前仓库中的分支情况，现在仅有一个 master 分支，其中 master 分支前的 ***** 号表示“当前所在的分支”，例如 * master 就意味着我们所在的位置为 demo 仓库的主分支。输入命令 git branch a，再输入命令 git branch，结果如下图所示：
 
@@ -106,4 +114,18 @@ git config --global --list #查看全局配置信息
 
     ![tag_2](.\tag_2.png)
 
-    ==a==
+11. `git push <远程仓库地址> <本地分支名>:<远程分支名>`
+
+     如图：
+
+     <img src="./git push.png" alr="push">
+
+     在Github上：
+     <img src="./push_github.png" width=200>
+     
+12. `git clone <远程仓库地址>`
+
+     可以将远程仓库拷贝到本地。
+
+
+​     
